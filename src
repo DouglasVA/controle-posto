@@ -4,36 +4,36 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
-
+	
 	public static void main(String[] args) {
-		
+					
 		Locale.setDefault(Locale.US);
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int alcool = 0;
-		int gasolina = 0;
-		int diesel = 0;
+		System.out.println("Olá! Selecione sua opção: \n\n1. Gasolina \n2. Álcool \n3. Diesel \n4. Sair \n");
 		
-		int tipo = sc.nextInt();
+		int alcool = 0, gasolina = 0, diesel = 0;
 		
-		while (tipo != 4) {
-			if (tipo == 1) {
-				alcool ++;
-			} else if (tipo == 2) {
-				gasolina ++;
-			} else if (tipo == 3) {
+		int opcao = sc.nextInt();
+		
+		while (opcao != 4) {
+			if (opcao == 1) {
+				alcool++;
+			} else if (opcao == 2) {
+				gasolina++;
+			} else if (opcao == 3) {
 				diesel++;
-			}
+			} else System.out.println("Digite um código válido!");
 			
-			tipo = sc.nextInt();	// ??????
+			opcao = sc.nextInt();
 		}
 		
-		System.out.println("Muito obrigado");	
-		System.out.println("Alcool: " + alcool);
+		System.out.println("\nObrigado!");
+		System.out.println("Álcool: " + alcool);
 		System.out.println("Gasolina: " + gasolina);
-		System.out.println("Diesel: " + diesel);
-		
+		System.out.println("Diesel " + diesel);
+						
 		sc.close();
 		
 	}
